@@ -20,6 +20,8 @@ class TaskFactory extends Factory
             'title' => $this->faker->sentence,
             'completed_at' => $this->faker->optional()->dateTime,
             'user_id' => \App\Models\User::factory()->create()->id,
+            'building_id' => \App\Models\Building::factory()->create()->id,
+
         ];
     }
 }
