@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('status')->default('open');
-            $table->timestamp('completed_at')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->foreignIdFor(\App\Models\Building::class, 'building_id')->nullable();
             $table->timestamps();
