@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BuildingController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
@@ -21,3 +22,6 @@ Route::get('/tasks', [TaskController::class, 'index']);
 Route::post('/tasks', [TaskController::class, 'store']);
 
 Route::post('/tasks/{task}/comments', [CommentController::class, 'store']);
+
+Route::get('/buildings', [BuildingController::class, 'index']);
+Route::post('/buildings', [BuildingController::class, 'store']);
