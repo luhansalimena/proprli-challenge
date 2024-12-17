@@ -7,9 +7,9 @@ use App\Models\Task;
 
 class GetTasksFiltered
 {
-    public static function execute(array $data)
+    public static function execute(array $data, array $with = []): mixed
     {
-        $tasks = Task::query();
+        $tasks = Task::query()->with($with);
 
         if (isset($data['building_id'])) {
             $tasks = Filters\BuildingId::execute($tasks, $data['building_id']);
