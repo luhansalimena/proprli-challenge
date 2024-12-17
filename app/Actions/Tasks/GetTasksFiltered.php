@@ -23,6 +23,10 @@ class GetTasksFiltered
             $tasks = Filters\CreatedAt::execute($tasks, $data['created_at']);
         }
 
+        if (isset($data['assigned_user'])) {
+            $tasks = Filters\AssignedUser::execute($tasks, $data['assigned_user']);
+        }
+
         return $tasks->get();
     }
 }
