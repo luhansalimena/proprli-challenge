@@ -32,6 +32,7 @@ class IndexTasksRequest extends FormRequest
             'created_at' => 'array',
             'created_at.from' => 'date|required_with:created_at.to',
             'created_at.to' => 'date|required_with:created_at.from',
+            'assigned_user' => 'integer|exists:users,id',
         ];
     }
 }
