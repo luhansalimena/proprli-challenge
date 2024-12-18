@@ -20,10 +20,8 @@ class TaskFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'status' => $this->faker->randomElement(array_column(TasksStatusesEnum::cases(), 'name')),
-            'completed_at' => $this->faker->optional()->dateTime,
             'user_id' => \App\Models\User::factory()->create()->id,
             'building_id' => \App\Models\Building::factory()->create()->id,
-
         ];
     }
 }
