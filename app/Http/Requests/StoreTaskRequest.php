@@ -26,11 +26,12 @@ class StoreTaskRequest extends FormRequest
         return [
             'title' => 'required|string',
             'status' => [
+                'required',
                 'string',
                 Rule::in(array_column(TasksStatusesEnum::cases(), 'name')),
             ],
-            'user_id' => 'integer|exists:users,id',
-            'building_id' => 'integer|exists:buildings,id',
+            'user_id' => 'required|integer|exists:users,id',
+            'building_id' => 'required|integer|exists:buildings,id',
         ];
     }
 }
