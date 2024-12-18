@@ -77,17 +77,3 @@ The `propli.yaml` file contains the Insomnia collection of requests for this app
     ```bash
     ./vendor/bin/sail artisan test
     ```
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contributing
-
-Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## Acknowledgments
-
-- Laravel
-- Docker
-- Insomnia
