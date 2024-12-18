@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Tasks\Filters;
+namespace App\Filters\Tasks;
 
 class Status
 {

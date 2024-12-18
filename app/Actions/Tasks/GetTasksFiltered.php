@@ -2,31 +2,25 @@
 
 namespace App\Actions\Tasks;
 
-use App\Models\Task;
-
+use App\Repository\Interface\TasksRepositoryInterface;
+use Illuminate\Database\Eloquent\Collection;
 
 class GetTasksFiltered
 {
-    public static function execute(array $data, array $with = []): mixed
+    private TasksRepositoryInterface $repository;
+
+    public function __construct(TasksRepositoryInterface $repository)
     {
-        $tasks = Task::query()->with($with);
+        $this->repository = $repository;
+    }
 
-        if (isset($data['building_id'])) {
-            $tasks = Filters\BuildingId::execute($tasks, $data['building_id']);
-        }
+    public static function execute(array $data, array $with = []): Collection
+    {
+        return app(self::class)->handle($data, $with);
+    }
 
-        if (isset($data['status'])) {
-            $tasks = Filters\Status::execute($tasks, $data['status']);
-        }
-
-        if (isset($data['created_at'])) {
-            $tasks = Filters\CreatedAt::execute($tasks, $data['created_at']);
-        }
-
-        if (isset($data['assigned_user'])) {
-            $tasks = Filters\AssignedUser::execute($tasks, $data['assigned_user']);
-        }
-
-        return $tasks->get();
+    public function handle(array $data, array $with = []): Collection
+    {
+        return $this->repository->getFiltered($data, $with);
     }
 }

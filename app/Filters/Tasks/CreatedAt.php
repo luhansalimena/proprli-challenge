@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Actions\Tasks\Filters;
-
+namespace App\Filters\Tasks;
 class CreatedAt
 {
     public static function execute($tasks, $dates)
