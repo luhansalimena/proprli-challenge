@@ -8,7 +8,7 @@ use App\Filters\Tasks\CreatedAt;
 use App\Filters\Tasks\Status;
 use App\Models\Task;
 use App\Repository\Interface\TasksRepositoryInterface;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 
 class TasksRepository implements TasksRepositoryInterface
 {
