@@ -12,4 +12,9 @@ class BuildingsRepository implements BuildingsRepositoryInterface
     {
         return Building::all();
     }
+
+    public function create(array $data): Building
+    {
+        return Building::create($data);
+    }
 }
