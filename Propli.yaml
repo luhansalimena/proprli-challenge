@@ -1,0 +1,309 @@
+_type: export
+__export_format: 4
+__export_date: 2024-12-18T04:02:59.985Z
+__export_source: insomnia.desktop.app:v10.2.0
+resources:
+  - _id: req_de61b4e6a6924278b85626f2e828fd77
+    parentId: fld_eec9a1dac1f04a1d9e13fcdbd0874893
+    modified: 1734492568485
+    created: 1734392694082
+    url: http://localhost/api/tasks
+    name: Get Tasks Filtered
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_106e847da5e34ea59be270aa04c79cec
+        name: building_id
+        value: "2"
+        description: ""
+        disabled: true
+      - id: pair_3bbd42b8b11d4d82ab4408c200afa010
+        name: status
+        value: IN_PROGRESS
+        description: ""
+        disabled: true
+      - id: pair_1ed4246a996b47f69d7ef46b3ae8a356
+        name: created_at[from]
+        value: "2024-12-01 "
+        description: ""
+        disabled: true
+      - id: pair_29ec118f20704a96837011bbf7ae9196
+        name: created_at[to]
+        value: 2024-12-31
+        description: ""
+        disabled: true
+      - id: pair_497ecf35d8f0401abfe4ebe6947d3f7b
+        name: assigned_user
+        value: "1"
+        description: ""
+        disabled: true
+    headers:
+      - name: User-Agent
+        value: insomnia/10.2.0
+        id: pair_b6fa71284ea5491aaeb9021a4c805373
+      - id: pair_84f743642e424ab38fbd4fb7151ed8e3
+        name: Accept
+        value: Application/json
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1734392694082
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_eec9a1dac1f04a1d9e13fcdbd0874893
+    parentId: wrk_scratchpad
+    modified: 1734494541358
+    created: 1734392594292
+    name: Proprli
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1734392594292
+    environmentType: kv
+    _type: request_group
+  - _id: wrk_scratchpad
+    parentId: null
+    modified: 1734298128872
+    created: 1734298128872
+    name: Scratch Pad
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_8c127d7000544e1ca3b66d98758ea2e4
+    parentId: fld_eec9a1dac1f04a1d9e13fcdbd0874893
+    modified: 1734478296096
+    created: 1734478153005
+    url: http://localhost/api/tasks
+    name: Create Tasks
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Teste",
+        	"status": "OPEN",
+        	"user_id": 1,
+        	"building_id": 1
+        }
+    parameters:
+      - id: pair_5009bc347dbf4ddfba9ac96cabde3f70
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.2.0
+        id: pair_b6fa71284ea5491aaeb9021a4c805373
+      - id: pair_84f743642e424ab38fbd4fb7151ed8e3
+        name: Accept
+        value: Application/json
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1734392694032
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_495d6dce8b6a4fb8a96c62f0ccc0a62d
+    parentId: fld_eec9a1dac1f04a1d9e13fcdbd0874893
+    modified: 1734478821050
+    created: 1734478684189
+    url: http://localhost/api/tasks/154/comments
+    name: Create Comments to Tasks
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"content": "TESTEEEEE",
+        	"user_id": 1
+        }
+    parameters:
+      - id: pair_5009bc347dbf4ddfba9ac96cabde3f70
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.2.0
+        id: pair_b6fa71284ea5491aaeb9021a4c805373
+      - id: pair_84f743642e424ab38fbd4fb7151ed8e3
+        name: Accept
+        value: Application/json
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1734392693982
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_588ac548f10441539fd8b0bbf2c37d6b
+    parentId: fld_eec9a1dac1f04a1d9e13fcdbd0874893
+    modified: 1734479304776
+    created: 1734479281917
+    url: http://localhost/api/buildings
+    name: Create Building
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "teste"
+        }
+    parameters:
+      - id: pair_5009bc347dbf4ddfba9ac96cabde3f70
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.2.0
+        id: pair_b6fa71284ea5491aaeb9021a4c805373
+      - id: pair_84f743642e424ab38fbd4fb7151ed8e3
+        name: Accept
+        value: Application/json
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1734392693932
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_635a4fcc0f4f46fdb0ed361e7289c37c
+    parentId: fld_eec9a1dac1f04a1d9e13fcdbd0874893
+    modified: 1734479427687
+    created: 1734479420943
+    url: http://localhost/api/buildings
+    name: Get Buildings
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_5009bc347dbf4ddfba9ac96cabde3f70
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/10.2.0
+        id: pair_b6fa71284ea5491aaeb9021a4c805373
+      - id: pair_84f743642e424ab38fbd4fb7151ed8e3
+        name: Accept
+        value: Application/json
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1734392693882
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    parentId: wrk_scratchpad
+    modified: 1734298136645
+    created: 1734298136645
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1734298136645
+    environmentType: kv
+    _type: environment
+  - _id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    parentId: wrk_scratchpad
+    modified: 1734395936482
+    created: 1734298136706
+    name: Default Jar
+    cookies:
+      - key: XSRF-TOKEN
+        value: eyJpdiI6IjhIdnlWeUpDZ1MxS2ZqandNNnJCZnc9PSIsInZhbHVlIjoiKzBpZUgrY285TzE3ZFJqc3d4azQ2UzQxWWhHYTB1a1VVUE9XS1JSNHcxcnlGR1lIUUlJMnF6QnZRZ09CTnhzRFJyR2pSaUJscHM1TVZCOUVuYzlhRjVEZE8rREdVaDVIMndXbXh6Ti9WS1laZkorcnp6bTF4dzJiTUpYNHR1QXUiLCJtYWMiOiI1MTJiM2JlNGE4NDk1YmQ4NmMxYTYyZTM1MWQxOTE4NDM5ZjVlODA3ZTc5Y2UxNTFiZTcwOGQyODAyNmE4N2RmIiwidGFnIjoiIn0%3D
+        expires: 2024-12-16T19:19:43.000Z
+        maxAge: 7200
+        domain: desafio-objective.test
+        path: /
+        hostOnly: true
+        creation: 2024-12-15T21:29:26.293Z
+        lastAccessed: 2024-12-16T17:19:43.155Z
+        sameSite: lax
+        id: ca8e1f54-1b63-4cd2-9d5b-4d1a30e87f10
+      - key: laravel_session
+        value: eyJpdiI6IkJEOG94SEZSQXBPMFFBejlNbU5JTEE9PSIsInZhbHVlIjoiUnNhWVhKZ1ZPYlhOTUtnVXVnejl2OW1JVjFOZ3YvLzhHNHRqeXEyRy9wWlRNTFUrM1dWOWFoZUlmcjVwQzBEdUZVWTcxS0pFSlZFYUxxR3JhRzhXR3F6QnVhU25HVjVjNWQ1MFlxS2srcTFhZ1FZWm9HRjlRSUt3U2RIKzlvUFkiLCJtYWMiOiJhZGQ1OGUxNTQ2ZDBiNDhiOGY0MDYzYmRlOTBiNmFjZGRiNTQ0NWNiNDAxOGUxMmFhMjdiYjBmYzgwZWM4M2U0IiwidGFnIjoiIn0%3D
+        expires: 2024-12-16T19:19:43.000Z
+        maxAge: 7200
+        domain: desafio-objective.test
+        path: /
+        httpOnly: true
+        hostOnly: true
+        creation: 2024-12-15T21:29:26.295Z
+        lastAccessed: 2024-12-16T17:19:43.155Z
+        sameSite: lax
+        id: ecd12995-05b5-4621-9097-f1ede33dd1da
+      - key: XSRF-TOKEN
+        value: eyJpdiI6IllaU0JEc1EzcFB6czZlSG1zWjYzSmc9PSIsInZhbHVlIjoiRzlWdDdGS0djV3UwWUVKR1FhWlVsbEMrdVJTYkhIZkZoTEJVY203bEZLNTVhQ2ZyNDVTbkt1bDdRUkhHejRaNWNSbGRpNlJKQzZrYTl6OStLeUltaThCUlhIVW95MzJoQkJ1T2ROV2JsSXIvM2JSUWowUGJlaXI1b0txRXE1MzciLCJtYWMiOiI5YjM0Y2Q4MjZlODVmOWM5ZWE1YjNjMjI0MWEwN2E4YmQ0MDYwZDlmYzM5N2JkYjUxOTY1YTM5NjYwMmQ4MjA5IiwidGFnIjoiIn0%3D
+        expires: 2024-12-17T02:38:56.000Z
+        maxAge: 7200
+        domain: localhost
+        path: /
+        hostOnly: true
+        creation: 2024-12-17T00:38:56.479Z
+        lastAccessed: 2024-12-17T00:38:56.479Z
+        sameSite: lax
+        id: 4a5b5b97-c88e-4512-9b76-8172063453fd
+      - key: laravel_session
+        value: eyJpdiI6IlAwZmZqRnh1M2NYZnR0cDlaNVRyR2c9PSIsInZhbHVlIjoiQmgzQkJRbFdKcStRZXQ3S0FZd3JvdEhWM29nWkhZZG8vb3BqV0o1MkhZUGYvMkdOSXlzZjFBL3RlQnNXQ0prNzA4VUdyd2xaT3BvKzVtSlAzR2Jpb0xDS3RJNVNPUkZvU2RQd0ZBWTczQ2RGSGRZT1l3Uk5UaTR2eXRWSjcxNEwiLCJtYWMiOiI3Y2FiZmIzYjI0NzdhYTZhYjZjYjA3Njc0NzViY2E3MTQzYzU4NjA5ZDFjMzNhOGVmNzVjOGYwMmNhNmMzNjRkIiwidGFnIjoiIn0%3D
+        expires: 2024-12-17T02:38:56.000Z
+        maxAge: 7200
+        domain: localhost
+        path: /
+        httpOnly: true
+        hostOnly: true
+        creation: 2024-12-17T00:38:56.482Z
+        lastAccessed: 2024-12-17T00:38:56.482Z
+        sameSite: lax
+        id: 0a2bf2b3-8b96-4c47-84a2-d14828b1ddfd
+    _type: cookie_jar
