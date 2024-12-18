@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Actions\Tasks;
+namespace App\Actions\Comments;
 
 use App\Models\Task;
-
 
 class CreateComment
 {
